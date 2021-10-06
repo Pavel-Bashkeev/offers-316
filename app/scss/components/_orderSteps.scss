@@ -1,0 +1,43 @@
+.order-steps {
+  padding: 60px 0;
+
+  &__title {
+    font: 800 35px/47px $font-open;
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    justify-content: space-around;
+    gap: 30px 0;
+    counter-reset: item;
+  }
+
+  &__item {
+    max-width: 460px;
+    width: 100%;
+    display: flex;
+    padding: 9px 8px 13px;
+    border-radius: 100px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    &-text {
+      max-width: 313px;
+      font: 800 20px / 27px $font-open;
+      color: $black;
+    }
+
+    &::before {
+      counter-increment: item;
+      content: counter(item);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border: 1px solid #1F7B34;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+  }
+}

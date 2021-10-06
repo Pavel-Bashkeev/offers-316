@@ -45,9 +45,11 @@
     max-width: 285px;
     padding-top: 14px;
   }
+  &__wrapper{
+    margin-bottom: 45px;
+  }
   &__text{
     font: 400 16px / 22px $font-open;
-    margin-bottom: 45px;
   }
   &__info{
     font: 700 18px / 25px $font-open;

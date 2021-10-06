@@ -30,19 +30,18 @@
   .stock-inner {
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0 -15px 37px;
+    padding: 11px 5px 13px;
   }
 
   .stock-inner__text {
     text-align: center;
-  }
-
-  .stock-inner__text {
     margin-right: 0px;
   }
 }
 
-@media (max-width: 420px) {
-  .stock-inner {
-    padding: 11px 10px;
-  }
+@media (max-width: 480px) {
+  .stock-inner__text {
+    font: 700 20px/27px "Open Sans";
+}
 }

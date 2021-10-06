@@ -1,0 +1,60 @@
+.formula{
+  padding: 50px 0 60px;
+  &__title{
+    font: 800 45px / 61px $font-open;
+    color: #183f4e;
+    margin-bottom: 7px;
+  }
+  &__subtitle{
+    font: 600 20px / 27px $font-open;
+    color: #303030;
+    margin-bottom: 5px;
+  }
+}
+.formula-items{
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: 
+    'item-1 item-main item-3'
+    'item-2 item-main item-4'
+    '. item-5 .'
+  ;
+}
+.formula-item{
+  align-items: center;
+  &__box{
+    max-width: 168px;
+    flex-shrink: 0;
+  }
+  &__info{
+    max-width: 275px;
+    flex-shrink: 0;
+    &-title{
+      font: 800 20px / 27px $font-open;
+      color: $black;
+      margin-bottom: 6px;
+    }
+    &-text{
+      font: 400 16px / 21px $font-open;
+    }
+  }
+  &--one{
+    grid-area: item-1;
+  }
+  &--second{
+    grid-area: item-2;
+  }
+  &--main{
+    grid-area: item-main;
+  }
+  &--third{
+    grid-area: item-3;
+  }
+  &--fourth{
+    grid-area: item-4;
+  }
+  &--fifth{
+    grid-area: item-5;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,33 @@
+.power{
+  padding: 60px 0px 50px;
+  background: linear-gradient(180deg, #6CABEB 0%, #2C5983 100%);
+  &__title{
+    color: $white;
+    font: 800 45px/ 61px $font-open;
+  }
+  &__subtitle{
+    color: $white;
+    font: 600 20px / 27px $font-open;
+    margin-bottom: 30px;
+  }
+}
+.power-list{
+  &__item{
+    max-width: 277px;
+    &::before{
+      content: '';
+      width: 28px;
+      height: 28px;
+      margin-right: 23px;
+      background-image: url('../images/dest/check.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      flex-shrink: 0;
+    }
+    &-text{
+      font: 600 18px / 24px $font-open;
+      color: $white;
+    }
+  }
+}

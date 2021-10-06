@@ -1,0 +1,113 @@
+.indicators{
+  background: linear-gradient(180deg, #6CABEB 0%, #2C5983 100%);
+
+  &__container{
+    display: flex;
+  }
+  &-content{
+    padding: 58px 15px 40px;
+    margin-right: 9%;
+  }
+  &-decor{
+    margin-top: auto;
+    max-width: 280px;
+    width: 100%;
+  }
+  &__inner{
+    max-width: 720px;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    padding: 20px 6px 35px 6px;
+    margin-bottom: 20px;
+  }
+  &__text{
+    font: 400 16px/24px $font-open;
+    max-width: 740px;
+    color: $white;
+  }
+}
+.indicators-stick{
+  flex-shrink: 0;
+  width: 207px;
+  align-items: center;
+  justify-items: center;
+  margin-right: 25px;
+  &__img,&__text{
+    grid-area: 1/2;
+  }
+  &__text{
+    max-width: 120px;
+    color: $white;
+    font: 600 13px / 18px $font-open;
+    transform: translate(3px, 10px);
+    &--accent{
+      font:800 24px/30px $font-open;
+      margin-bottom: 5px;
+    }
+  }
+}
+.indicators-items{
+  max-width: 400px;
+  width: 100%;
+  &__item{
+    width: 100%;
+    &-title{
+      margin-bottom: 5px;
+      font: 800 16px / 24px $font-open;
+      color: #202020;
+      max-width: 300px;
+    }
+    &-box{
+      
+      width: 100%;
+      display: flex;
+      align-items: center;
+      border-radius: 20px;
+      height: 26px;
+      padding-right: 25px;
+    }
+    &-line{
+      height: 100%;
+      border-radius: 20px;
+      margin-right: 2%;
+    }
+    &-percent{
+      font: 800 18px / 24px $font-open;
+      color: $white;
+      margin-left: auto;
+    }
+    &:nth-child(1){
+      .indicators-items__item-box{
+        background-color: #EC797C;
+      }
+      .indicators-items__item-line{
+        width: 90%;
+        background-color: #dc4453;
+      }
+      
+    }
+    &:nth-child(2){
+      margin-bottom: 30px;
+      .indicators-items__item-box{
+         background-color: #7FCAB5;
+      }
+      .indicators-items__item-line{
+        width: 85%;
+        background-color: #2ebb9b;
+      }
+     
+    }
+    &:nth-child(3){
+      .indicators-items__item-box{
+        background-color: #4ac4ed;
+      }
+      .indicators-items__item-line{
+        width: 6%;
+        background-color: #27a1cb;
+      }
+    }
+
+  }
+}

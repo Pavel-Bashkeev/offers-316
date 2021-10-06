@@ -64,7 +64,7 @@
   }
 
   &__img--big {
-    width: 159px;
+    width: 175px;
   }
 
   &__img--main {
@@ -78,7 +78,7 @@
   &__content {
     padding: 13px 26px 20px 56px;
     gap: 20px 40px;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
   }
 
@@ -140,7 +140,7 @@
   &__decor {
     &--first {
       top: 23%;
-      left: -57px;
+      left: -40px;
     }
 
     &--second {
@@ -195,12 +195,12 @@
 
 .kit-item.active-checked {
   .kit-item__top {
-    background-color: #248851;
+    background-color: #145587;
 
     .kit-item__label {
       .kit-item__text {
         .kit-item__text--more {
-          background-color: #136337;
+          background-color: #0C4673;
         }
       }
     }
@@ -208,7 +208,7 @@
 
   .kit-item__content {
     .kit-item__descr {
-      background-color: #248851;
+      background-color: #145587;
 
     }
   }
@@ -249,8 +249,6 @@
 .kit-info {
   margin-top: 25px;
   display: grid;
-  // grid-template-columns: 200px 580px;
-  // grid-template-rows: auto;
   grid-template-areas:
     'banner title'
     'banner text'

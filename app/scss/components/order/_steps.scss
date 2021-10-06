@@ -3,6 +3,7 @@
 
   &__items {
     max-width: 690px;
+    flex-grow: 1;
     justify-content: space-between;
     align-items: center;
     margin-left: auto;
@@ -53,23 +54,46 @@
 @media (max-width: 700px) {
   .steps__items {
     max-width: 320px;
+    width: 100%;
     background-image: url('../images/dest/icons/steps-line-min.svg');
     background-size: contain;
     padding: 0px 1px;
   }
+
   .steps__items::after {
 
     left: 5px;
     height: 2px;
-;
-}
+    ;
+  }
+
   .steps__item {
     width: 20px;
     height: 24px;
     font: 700 13px/20px "Open Sans";
   }
+
   .steps__item:not(:last-child)::after {
     width: 18px;
     height: 18px;
+  }
 }
+@media (max-width: 480px) {
+  .steps .steps__container .logo .logo__name {
+    font: 400 20px/25px "Orange Juice";
+  }
+  .steps__items{
+    margin: 0 auto;
+  }
+}
+@media (max-width: 479px) {
+  .steps__container{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 420px) {
+  .steps{
+    padding: 0 0 25px;
+  }  
 }
