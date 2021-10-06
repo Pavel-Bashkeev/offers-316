@@ -1,0 +1,25 @@
+@import '../../node_modules/reset-css/sass/reset';
+@import './blocks/classFrame';
+@import './blocks/vars';
+@import './vendor/mixins';
+@import './blocks/fonts';
+@import './blocks/global';
+
+@import './components/header';
+@import './components/hero';
+@import './components/influence';
+@import './components/symptoms';
+@import './components/discount';
+@import './components/presentProduct';
+
+
+@import './components/order/steps';
+@import './components/order/stock';
+@import './components/order/kit';
+@import './components/order/form';
+@import './components/order/delivery';
+@import './components/order/reviews';
+
+// @import './components/footer';
+
+

@@ -1,0 +1,100 @@
+.symptoms {
+  background-image: url('../images/dest/symptomsSection/symptoms-bg.jpg');
+  @extend %bg-contain;
+  background-position: 100% 50%;
+  position: relative;
+  z-index: 1;
+  padding: 70px 0 60px;
+
+  &::after {
+    z-index: -2;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(90.54deg, #E5EEF3 80.0%, rgba(222, 227, 230, 0) 100.0%);
+  }
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../images/dest/symptomsSection/decor-bg.png');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 65%;
+    z-index: -1;
+  }
+
+  &__title {
+    max-width: 590px;
+    font: 800 35px / 47px $font-open;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    font: 600 25px / 34px $font-open;
+    max-width: 720px;
+    margin-bottom: 30px;
+  }
+}
+
+.symptoms-content {
+
+  &__list {
+    max-width: 520px;
+    margin-right: 170px;
+    padding-bottom: 30px;
+
+    &-item {
+      font: 700 20px / 27px $font-open;
+      position: relative;
+      color: #484848;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -46px;
+        width: 28px;
+        height: 28px;
+        background-image: url('../images/dest/icons/dot.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__decor {
+    background-image: url('../images/dest/symptomsSection/decor.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 286px;
+    padding: 23px 82px 74px 36px;
+    margin-top: auto;
+    margin-bottom: 40px;
+    margin-right: 10px;
+    height: fit-content;
+
+    &-text {
+      font: 'italic'600 20px/27px $font-open;
+    }
+  }
+
+  &__box {
+    width: 212px;
+    margin-top: auto;
+    margin-bottom: -10px;
+  }
+}

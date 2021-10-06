@@ -1,0 +1,20 @@
+.header{
+  padding: 5px 0 10px;
+  background-color: #FFBE17;
+  &__container{
+    .logo{
+      &__img{
+        margin-right: 10px;
+      }
+      &__name{
+        font: 400 25px/25px $font-decor-name;
+        color: $black;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__sale{
+    transform: translateX(-50%);
+    font: 400 20px / 27px $font-open;
+  }
+}
