@@ -162,7 +162,7 @@
   }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1190px) {
   .hero-content__right {
     margin: 0 auto 0;
   }
@@ -212,7 +212,7 @@
     margin-right: 0;
     position: absolute;
     right: 10%;
-    top: 11%;
+    top: 12%;
   }
 
   .hero__top-sticker {
@@ -276,11 +276,6 @@
   }
 }
 
-@media (max-width: 450px) {
-  .hero__top-banner {
-    display: none;
-  }
-}
 
 @media (max-width: 420px) {
   .hero-content__right {

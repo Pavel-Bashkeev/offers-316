@@ -29,10 +29,13 @@
   &__info{
     max-width: 275px;
     flex-shrink: 0;
+    word-wrap: break-word;
     &-title{
       font: 800 20px / 27px $font-open;
       color: $black;
       margin-bottom: 6px;
+      overflow-wrap: break-word;
+      
     }
     &-text{
       font: 400 16px / 21px $font-open;
@@ -57,4 +60,51 @@
     grid-area: item-5;
     margin: 0 auto;
   }
+}
+@media (max-width: 1340px) {
+  .formula-items{
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: 
+      'item-1'
+      'item-2'
+      'item-main'
+      'item-3'
+      'item-4'
+      'item-5'
+    ;
+    justify-content:center ;
+  }
+  .formula__subtitle {
+    margin-bottom: 30px;
+}
+}
+@media (max-width: 480px) {
+  .formula-items{
+    grid-row-gap: 30px;
+  }
+  .formula-item__info {
+    flex-shrink: 2;
+}
+.formula-item__box {
+  max-width: 140px;
+}
+}
+@media (max-width: 420px) {
+  .formula-item__info {
+    max-width: 205px;
+}
+}
+@media (max-width: 360px) {
+  .formula-item__info {
+    max-width: 180px;
+}
+}
+@media (max-width: 320px) {
+  .formula__title {
+    font: 800 38px/46px "Open Sans";
+}
+.formula-item__box {
+  max-width: 120px;
+}
 }

@@ -1,6 +1,7 @@
 .present-product {
   padding: 77px 0 120px;
   position: relative;
+
   &__title {
     font: 800 45px/61px $font-open;
     color: #183f4e;
@@ -24,11 +25,13 @@
     clip-path: polygon(0 80%, 100% 0%, 100% 100%, 0 100%);
     transform: scale(-1, 1);
   }
-  &.present-product--second{
-    &::after{
+
+  &.present-product--second {
+    &::after {
       display: none;
     }
   }
+
   &__box {
     max-width: 500px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
@@ -40,11 +43,13 @@
   &__img {
     border-radius: 10px;
   }
-  &__tube{
+
+  &__tube {
     width: 136px;
     bottom: -45px;
     left: 30px;
   }
+
   &__text {
     width: 50%;
     color: #484848;
@@ -56,23 +61,74 @@
     }
   }
 }
-.present-decor--left{
+
+.present-decor--left {
   top: 50%;
   transform: translateY(-50%);
   left: 0;
+  z-index: 0;
 }
-.present-decor--right{
+
+.present-decor--right {
   top: 50%;
   transform: translateY(-50%);
   right: 0;
+  z-index: 0;
+}
+
+@media (max-width: 1650px) {
+  .present-decor--left {
+    display: none;
+  }
+
+  .present-decor--right {
+    display: none;
+  }
 }
 
 @media (max-width: 1150px) {
   .present-product__text {
     width: 100%;
     padding: 0px 0px;
+  }
+
+  .present-product__container {
+    gap: 30px 0;
+  }
+
+  .present-product--second.present-product {
+    .present-product__container {
+      gap: 70px 0;
+    }
+  }
 }
-.present-product__container{
-  gap: 30px 0;
+
+@media (max-width: 500px) {
+  .present-product__tube {
+    width: 120px;
+  }
+}
+@media (max-width: 420px) {
+  .present-product {
+    padding: 77px 0 50px;
+}
+  .present-product--second.present-product {
+    .present-product__container {
+      gap: 50px 0;
+    }
+  }
+  .present-product__tube {
+    width: 100px;
+    bottom: -25px;
+    left: 30px;
+}
+.present-product__title {
+  font: 800 35px/40px "Open Sans";
+}
+}
+@media (max-width: 375px) {
+  .present-product__tube {
+    bottom: -47px;
+    left: 16px;
 }
 }

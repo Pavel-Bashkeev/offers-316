@@ -12,6 +12,7 @@
   }
 }
 .power-list{
+  gap: 30px 0;
   &__item{
     max-width: 277px;
     &::before{
@@ -30,4 +31,9 @@
       color: $white;
     }
   }
+}
+@media (max-width: 420px) {
+  .power__title {
+    font: 800 35px/50px "Open Sans";
+}
 }
