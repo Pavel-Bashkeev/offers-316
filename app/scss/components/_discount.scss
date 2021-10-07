@@ -3,10 +3,10 @@
   @extend %bg-cover;
   background-image: url('../images/dest/discountBlock/discount-bg.jpg');
   &__container{
-    display: flex;
-    align-items: center;
+    gap: 30px 0;
     .link{
       width: 100%;
+      margin-right: auto;
     }
   }
   &__box{
@@ -21,4 +21,26 @@
     }
   }
 
+}
+@media (max-width: 1150px) {
+  .discount__container .link{
+    margin-left: auto;
+  }
+  .discount__box {
+    margin-right: 0px;
+}
+
+}
+@media (max-width: 600px) {
+  .discount__text {
+    font: 500 20px/40px "Open Sans";
+  }
+  .discount__text--accent {
+    font: 800 30px/40px "Open Sans";
+}
+}
+@media (max-width: 480px) {
+  .discount {
+    background-image: url('../images/dest/discountBlock/discount-bg-min.jpg');
+}
 }

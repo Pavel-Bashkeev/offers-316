@@ -1,19 +1,30 @@
-const sliderBox = document.querySelector('.slider .swiper-container');
-if(sliderBox){
+const sliderBox = document.querySelector('.slider .swiper');
+if (sliderBox) {
   let slider = new Swiper(sliderBox, {
-  spaceBetween: 20,
-  slidesPerView: 3,
-  loop: false,
-  freeMode: true,
-  allowTouchMove: false,
-  setWrapperSize: true,
-  navigation: {
-    prevEl: '.swiper-btn-prev',
-    nextEl: '.swiper-btn-next',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    type: "fraction",
-  },
-})
+    slidesPerView: 3,
+        spaceBetween: 20,
+    loop: false,
+    allowTouchMove: false,
+    setWrapperSize: true,
+    
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        allowTouchMove: true,
+        spaceBetween: 40,
+        navigation: {
+          prevEl: '.swiper-btn-prev',
+          nextEl: '.swiper-btn-next',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: "fraction",
+        },
+      },
+      1320: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      }
+    }
+  })
 }

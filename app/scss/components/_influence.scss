@@ -76,6 +76,7 @@
     &-text {
       font: 400 20px / 28px $font-open;
       color: #484848;
+      height: 56px;
     }
 
     &-dot {
@@ -157,4 +158,17 @@
     transform: scale(4);
     opacity: 0;
   }
+}
+@media (max-width: 800px) {
+  .influence-items__inner {
+    background-image: none;
+    gap: 20px 100px;
+    justify-content: space-around;
+    align-items: center;
+}
+}
+@media (max-width: 390px) {
+  .influence-items__inner {
+    gap: 20px 40px;
+}
 }

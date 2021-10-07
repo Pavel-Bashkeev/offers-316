@@ -1,49 +1,138 @@
-.healing{
+.healing {
   background-image: url('../images/dest/healingSection/healing-bg.png');
   background-size: auto;
   background-position: left center;
   background-repeat: no-repeat;
   background-color: #FDFCFC;
   overflow: hidden;
-  &__container{
-    padding: 58px 15px 100px;
+
+  &__container {
+    padding: 0px 15px 100px;
+    margin-left: 0;
   }
-  &__title{
+
+  &__title {
     font: 800 35px / 47px $font-open;
     color: #183F4E;
     max-width: 500px;
     margin-bottom: 30px;
+    padding-top: 50px;
   }
-  &-descr{
+
+  &-descr {
     z-index: 1;
     position: relative;
-    &__text{
-      font:400 20px / 27px $font-open;
+
+    &__text {
+      font: 400 20px / 27px $font-open;
       max-width: 630px;
       color: #484848;
-      &--accent{
+
+      &--accent {
         font-weight: 700;
       }
-      &:not(:last-child){
+
+      &:not(:last-child) {
         margin-bottom: 15px;
       }
     }
   }
-  &-decor{
-    top:0;
+
+  &-decor {
+    top: 0;
     right: 14%;
     z-index: 0;
-    &::after{
+
+    &::after {
       content: '';
       position: absolute;
-      top:0;
-      left:0;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, rgba(253,252,252,1) 0%, rgba(9,9,121,0) 25%, rgba(77,77,158,0) 75%, rgba(253,252,252,1) 100%);
+      background: linear-gradient(90deg, rgba(253, 252, 252, 1) 0%, rgba(9, 9, 121, 0) 25%, rgba(77, 77, 158, 0) 75%, rgba(253, 252, 252, 1) 100%);
     }
-    &__img{
+
+    &__img {
       display: block;
     }
   }
+}
+.healing-decor__img--min{
+  display: none;
+}
+.healing-decor-banner {
+  width: 115px;
+  bottom: 40px;
+  left: 10%;
+  z-index: 10;
+}
+
+@media (max-width: 1800px) {
+  .healing {
+    background-image: none;
+  }
+}
+
+@media (max-width: 1700px) {
+  .healing-decor {
+    right: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .healing__title {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .healing__container {
+    padding: 0 15px 30px;
+  }
+
+  .healing-decor {
+    position: relative;
+    order: -1;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .healing-decor::after {
+    display: none;
+  }
+
+  .healing__wrapper {
+    gap: 30px 0;
+  }
+
+  .healing-descr__text {
+    max-width: 100%;
+
+  }
+
+  .healing-decor-banner {
+    left: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .healing-decor-banner {
+    width: 115px;
+    bottom: 20px;
+    left: 10%;
+    z-index: 10;
+  }
+  .healing-decor__img{
+    display: none;
+  }
+  .healing-decor__img--min{
+    display: block;
+}
+.healing__title {
+  text-align: left;
+}
+}
+@media (max-width: 420px) {
+  .healing__title {
+    font: 800 29px/44px "Open Sans";
+}
 }

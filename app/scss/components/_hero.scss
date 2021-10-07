@@ -1,9 +1,10 @@
-.hero{
+.hero {
   padding-top: 20px;
   padding-bottom: 50px;
   @extend %bg-cover;
   background-image: url('../images/dest/heroSection/hero-bg.png');
-  &::after{
+
+  &::after {
     content: '';
     width: 100%;
     height: 50px;
@@ -11,42 +12,52 @@
     bottom: 0;
     left: 0;
     background: #276FA1;
-    clip-path: polygon(0 80%,100% 0%,100% 100%,0 100%);
+    clip-path: polygon(0 80%, 100% 0%, 100% 100%, 0 100%);
   }
-  &__top{
+
+  &__top {
     margin-bottom: 30px;
-    &-box{
+
+    &-box {
       margin-right: 40px;
     }
-    &-banner{
+
+    &-banner {
       width: 112px;
       height: 113px;
       margin-right: 30px;
     }
-    &-sticker{
+
+    &-sticker {
       width: 178px;
       height: 112px;
     }
   }
-  &__title{
+
+  &__title {
     font: 800 55px/75px $font-open;
     color: #cc0d00;
     margin-bottom: 11px;
-    &--accent{
-      color:#275179;
+
+    &--accent {
+      color: #275179;
     }
   }
-  &__subtitle{
+
+  &__subtitle {
     font: 700 25px / 35px $font-open;
     color: #484848;
     max-width: 520px;
   }
 }
-.hero-content{
+
+.hero-content {
   padding-bottom: 13px;
-  &__list{
-    &-item{
-      &:not(:last-child){
+  gap: 40px 0;
+
+  &__list {
+    &-item {
+      &:not(:last-child) {
         position: relative;
         display: flex;
         align-items: center;
@@ -54,7 +65,8 @@
         margin-bottom: 30px;
         font: 600 19px / 25px $font-open;
         color: #484848;
-        &::before{
+
+        &::before {
           content: '';
           width: 28px;
           height: 28px;
@@ -66,53 +78,64 @@
           flex-shrink: 0;
         }
       }
-      &:last-child{
+
+      &:last-child {
         font: 700 23px / 31px $font-open;
         color: $white;
         background: linear-gradient(180deg, #6CABEB 0%, #2C5983 100%);
-        clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);    
+        clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
         max-width: 360px;
         padding: 16px 41px 15px 32px;
       }
     }
-    
+
   }
-  &__center{
+
+  &__center {
     justify-items: center;
     align-items: center;
     margin-right: 8px;
     margin-left: -50px;
-    &-decor,&-product{
+
+    &-decor,
+    &-product {
       grid-area: 1/2;
     }
-    &-product{
+
+    &-product {
       width: 274px;
     }
   }
-  &__right{
+
+  &__right {
     margin-top: auto;
     margin-bottom: 53px;
   }
-  &__price{
+
+  &__price {
     margin-bottom: 13px;
-    &-count{
+
+    &-count {
       display: flex;
       align-items: center;
       justify-items: center;
     }
-    &--current{
+
+    &--current {
       clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 10% 100%, 0% 50%, 10% 0%);
       background: linear-gradient(180deg, #73B3F5 0%, #265179 100%, #0C75D7 100%);
       font: 800 50px / 68px $font-open;
       padding: 5px 34px 9px 23px;
       color: $white;
       z-index: 1;
-      .hero-content__price-val{
+
+      .hero-content__price-val {
         font: 800 35px / 47px $font-open;
         margin: 0 0 -10px;
       }
     }
-    &--old{
+
+    &--old {
       font: 400 35px / 47px $font-open;
       background-color: #183F4E;
       padding: 0 41px 0 58px;
@@ -120,19 +143,185 @@
       position: relative;
       margin-left: -25px;
       z-index: 0;
-      &::after{
+
+      &::after {
         position: absolute;
         content: '';
         height: 2px;
         width: 51%;
         left: 53%;
-      transform: translateX(-50%);
+        transform: translateX(-50%);
         bottom: 40%;
         background-color: #fff;
       }
-      .hero-content__price-val{
+
+      .hero-content__price-val {
         font: 400 35px / 47px $font-open;
       }
     }
   }
+}
+
+@media (max-width: 1150px) {
+  .hero-content__right {
+    margin: 0 auto 0;
+  }
+
+  .hero-content__price--current {
+    clip-path: polygon(50% 0, 100% 15%, 100% 100%, 0 100%, 0 15%);
+  }
+
+  .hero-content__price {
+    align-items: flex-end;
+  }
+
+  .hero-content__price--old {
+    padding: 11px 41px 12px 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    background-image: url('../images/dest/heroSection/hero-bg-min.jpg');
+    background-size: 100% auto;
+    background-position: center top;
+    padding-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .hero__top {
+    margin-bottom: 300px;
+  }
+
+  .hero__title {
+    color: $white;
+
+    &--accent {
+      color: $white;
+    }
+  }
+
+  .hero__subtitle {
+    color: $white;
+  }
+
+  .hero__top-banner {
+    margin-right: 0;
+    position: absolute;
+    right: 10%;
+    top: 11%;
+  }
+
+  .hero__top-sticker {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+  }
+
+  .hero-content {
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(233, 245, 247, 0) 0%, #E9F5F7 12.87%);
+    margin: 0 -15px;
+    padding-bottom: 0;
+  }
+
+  .hero-content__center {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero-content__left {
+    order: 2;
+    width: 100%;
+  }
+
+  .hero-content__list {
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  .hero-content__list-item:last-child {
+    text-align: center;
+    clip-path: none;
+    max-width: 100%;
+    padding: 16px 41px 15px 32px;
+  }
+
+  .hero-content__list-item:not(:last-child) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__top-sticker {
+    top: 28%;
+    left: 0%;
+  }
+
+  .hero-content__center-product {
+    width: 214px;
+  }
+
+  .hero-content__center-decor {
+    max-width: 340px;
+  }
+
+  .hero__top-box {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero__top-banner {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-content__right {
+    max-width: 320px;
+    width: 100%;
+}
+  .hero-content__price {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-content__price--old {
+    margin-left: 0px;
+    padding: 11px 41px 12px 59px;
+    width: 100%;
+  }
+  .hero-content__price--current{
+    width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero__top {
+    margin-bottom: 200px;
+  }
+
+  .hero__top-sticker {
+    top: 24%;
+  }
+}
+@media (max-width: 320px) {
+  .hero__top{
+    margin-bottom: 150px;
+  }
+  .hero__title {
+    font: 800 52px/75px "Open Sans";
+}
+.hero__top-sticker {
+  top: 21%;
+}
 }
